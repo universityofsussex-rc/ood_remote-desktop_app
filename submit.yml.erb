@@ -2,6 +2,7 @@
 batch_connect:
   template: vnc
 script:
+  copy_environment: true
   native:
   - "--mem-per-cpu"
   - "<%= num_RAM.blank? ? 4 : num_RAM.to_i %>G"
