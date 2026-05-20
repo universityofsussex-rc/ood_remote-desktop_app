@@ -4,6 +4,8 @@ batch_connect:
 script:
   copy_environment: true
   native:
+  - "--cpus-per-task"
+  - "<%= num_cores.blank? ? 1 : num_cores.to_i %>"
   - "--mem-per-cpu"
   - "<%= num_RAM.blank? ? 4 : num_RAM.to_i %>G"
   - "--ntasks-per-node"
