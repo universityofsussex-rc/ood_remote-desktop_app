@@ -12,7 +12,7 @@ script:
   - "<%= num_tasks.blank? ? 1 : num_tasks.to_i %>"
   - "--nodes"
   - "<%= num_nodes.blank? ? 1 : num_nodes.to_i %>"
-  <%- if gpus_per_node.include?("0") -%>
+  <%- if gpus_per_node != "0" -%>
   - "--gres"
   - "gpu:A40:<%= gpus_per_node.to_i %>"
   <%- end -%>
