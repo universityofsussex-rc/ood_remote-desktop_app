@@ -20,7 +20,8 @@ echo $DISPLAY
 # Load custom env file
 <%- if context.custom_env -%>
 echo "Running Custom User Env Script"
-echo <%= context.custom_env -%>
+echo "<%= context.custom_env -%>"
+
 source <%= context.custom_env -%>
 <%- end -%>
 
