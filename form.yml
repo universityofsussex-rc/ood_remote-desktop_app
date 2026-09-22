@@ -94,8 +94,9 @@ form:
   - bc_queue
   - cuda_version
   - gpus_per_node
+  - gpu_flavor
+  - constraints 
   - custom_env
   - bc_vnc_resolution
   - bc_email_on_started
-  - gpu_flavor
-  - constraints 
+  
